@@ -33,7 +33,7 @@
         </nav>
         <div class=" row jumbotron-fluid p-4 p-md-3 text-white rounded bg-primary mr-0">
             <div class="col-md-6 px-0">
-              <img src="css/1.jpg" alt="diario hoy" class="img-fluid w-25 " >        
+              <img name="slider" alt="diario hoy" class="img-fluid w-25 " >        
             </div>
 
             <div class="col-md-6 px-0 align-self-center">
@@ -150,4 +150,21 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 </body>
+<script>
+
+  window.addEventListener("load",()=>{
+    var indice = 0;
+    console.log("funciona sopenco··· deja de dudar");
+    var imagenes =["css/1.jpg","css/javascript.png","css/logo.png","css/lol.jpeg"];
+     function repetir(){ 
+       
+     
+    document.slider.src = imagenes[indice]; 
+        if(indice < 3){indice++}
+        else{indice = 0;}
+    
+    }
+    setInterval(repetir,3000);
+  });
+</script>
 </html>
